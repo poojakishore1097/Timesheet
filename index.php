@@ -3,17 +3,17 @@ $host='ec2-18-214-140-149.compute-1.amazonaws.com';
 $db = 'd2rcudb9lus5jh';
 $username = 'alpowsjvfgoidx';
 $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
-$email='pavithra.balan@kgisl.com';
-$attmonth=2;
-$attyear=2021;
+$data = file_get_contents('php://input');
+//echo $data[0];
+//echo $data[1];
+//echo $data[2];
+
+$email=echo $data[0];
+$attmonth=echo $data[1];
+$attyear=echo $data[2];
 //$email=$_POST["email"];
 //$attmonth=$_POST["attmonth"];
 //$attyear=$_POST["attyear"];
-
-$data = file_get_contents('php://input');
-echo $data[0];
-echo $data[1];
-echo $data[2];
 
 //$_POST["empdetails"];
 //$data = json_decode($empdetails, true);
