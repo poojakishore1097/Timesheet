@@ -9,13 +9,15 @@ $attyear=2021;
 
 $data = file_get_contents('php://input');
 print $data;
-$email=$data[0];
-$att_month=$data[1];
-$att_year= $data[2];
-print $email;
-print $att_month;
-print $att_year;
-$emailnew=str_replace("%40","@",$data[0]);
+$dataarr = split ("&", $data); 
+$email=$dataarr[0];
+$att_month=$dataarr[1];
+$att_year= $dataarr[2];
+   print "$email <br />";
+   print "$att_month <br />" ;
+   print "$att_year <br />"  ;
+   
+$emailnew=str_replace("%40","@",$dataarr[0]);
 print $emailnew;
 //$email=$_POST["email"];
 //$attmonth=$_POST["attmonth"];
