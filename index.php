@@ -3,9 +3,12 @@ $host='ec2-18-214-140-149.compute-1.amazonaws.com';
 $db = 'd2rcudb9lus5jh';
 $username = 'alpowsjvfgoidx';
 $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
-$email='pavithra.balan@kgisl.com';
-$attmonth=2;
-$attyear=2021;
+//$email='pavithra.balan@kgisl.com';
+//$attmonth=2;
+//$attyear=2021;
+echo $_POST['email'];
+echo $_POST['attmonth'];
+echo $_POST['attyear'];
 //$_POST["empdetails"];
 //$data = json_decode($empdetails, true);
  
