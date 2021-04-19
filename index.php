@@ -6,9 +6,9 @@ $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
 //$email='pavithra.balan@kgisl.com';
 //$attmonth=2;
 //$attyear=2021;
-$email=$_POST['email'];
-$attmonth=$_POST['attmonth'];
-$attyear=$_POST['attyear'];
+$email=$_POST["email"];
+$attmonth=$_POST["attmonth"];
+$attyear=$_POST["attyear"];
 //$_POST["empdetails"];
 //$data = json_decode($empdetails, true);
  
