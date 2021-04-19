@@ -39,8 +39,8 @@ FROM (
       ) ORDER BY att_date -- Order the elements in the resulting array
     ) AS y
   FROM trn_employee_timesheet 
-  where official_email ='$email' AND EXTRACT('month' from  att_date) = $attmonth 
-    and EXTRACT('year' from att_date)=$attyear
+  where official_email ='$email' AND EXTRACT('month' from  att_date) = '$attmonth'
+    AND EXTRACT('year' from att_date)='$attyear'
 ) x;
 ";
  
