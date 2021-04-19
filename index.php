@@ -31,11 +31,11 @@ json_build_object(
   FROM trn_employee_timesheet 
   where official_email='$email' AND EXTRACT('month' from  att_date)=$attmonth AND EXTRACT('year' from att_date)=$attyear) x;";
  
-    // print_r($sql);
+    print_r($sql);
     
     $myArr = $myPDO->query($sql);
     $myJSON = json_encode($myPDO->query($sql));
-    // print_r($myJSON);
+    //print_r($myJSON);
  
     foreach($myPDO->query($sql)as $row){
         // print "<br/>";
