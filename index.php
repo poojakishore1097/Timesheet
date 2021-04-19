@@ -15,6 +15,8 @@ $att_year= $data[2];
 print $email;
 print $att_month;
 print $att_year;
+$emailnew=str_replace("%40","@",$data[0]);
+print $emailnew;
 //$email=$_POST["email"];
 //$attmonth=$_POST["attmonth"];
 //$attyear=$_POST["attyear"];
