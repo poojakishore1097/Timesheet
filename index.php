@@ -10,12 +10,11 @@ $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
 $data = file_get_contents('php://input');
 //print $data;
 $data = json_decode($json);
-$email=$data->email;
-echo $email;
-$attmonth=$data->attmonth;
-$attyear=$data->attyear;
+$official_email=$data->email;
+$att_month=$data->attmonth;
+$att_year=$data->attyear;
 print $data;
-print $email;
+print $official_email;
 $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password";
 
  try{
