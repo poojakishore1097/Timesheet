@@ -19,11 +19,8 @@ $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password"
 
     // create a PostgreSQL database connection
     $myPDO = new PDO("pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password");
-$sql = "SELECT  array_to_json(y)
-FROM (
-  SELECT  
-    array_agg(
-      json_build_object(
+$sql ="SELECT array_to_json(y) FROM (SELECT array_agg(
+json_build_object(
 'associate_code',associate_code,
 'official_email',official_email,
 'att_date',att_date,
@@ -39,7 +36,7 @@ FROM (
       ) ORDER BY att_date -- Order the elements in the resulting array
     ) AS y
   FROM trn_employee_timesheet 
-  where official_email ='$email' and EXTRACT('month' from  att_date) = $attmonth and EXTRACT('year' from att_date)=$attyear) x;";
+  where official_email='$email' AND EXTRACT('month' from  att_date)=$attmonth AND EXTRACT('year' from att_date)=$attyear) x;";
  
     // print_r($sql);
     
