@@ -35,7 +35,7 @@ json_build_object(
     
     $myArr = $myPDO->query($sql);
     $myJSON = json_encode($myPDO->query($sql));
-    //print_r($myJSON);
+    print_r($myArr);
  
     foreach($myPDO->query($sql)as $row){
         // print "<br/>";
