@@ -6,7 +6,7 @@ $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
 $email='pavithra.balan@kgisl.com';
 $attmonth=2;
 $attyear=2021;
-$_REQUEST["empdetails"];
+$_POST["empdetails"];
  
 $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password";
  
