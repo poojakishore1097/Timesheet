@@ -3,21 +3,11 @@ $host='ec2-18-214-140-149.compute-1.amazonaws.com';
 $db = 'd2rcudb9lus5jh';
 $username = 'alpowsjvfgoidx';
 $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
-//$email='pavithra.balan@kgisl.com';
-//$attmonth=2;
-//$attyear=2021;
-
-$data = file_get_contents('php://input');
-//print $data;
-$data = json_decode($data);
-print $data;
-$email=$data->email;
-$att_month=$data->attmonth;
-$att_year=$data->attyear;
-
-print $official_email;
-$dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password";
-
+$json = file_get_contents('php://input'); 
+$json = json_decode($json, true);
+$email=$json['email'];
+$attmonth=$json['attmonth'];
+$attyear=$json['attyear'];
  try{
 
     // create a PostgreSQL database connection
