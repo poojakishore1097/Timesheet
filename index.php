@@ -3,29 +3,18 @@ $host='ec2-18-214-140-149.compute-1.amazonaws.com';
 $db = 'd2rcudb9lus5jh';
 $username = 'alpowsjvfgoidx';
 $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
-$email='pavithra.balan@kgisl.com';
-$attmonth=2;
-$attyear=2021;
+//$email='pavithra.balan@kgisl.com';
+//$attmonth=2;
+//$attyear=2021;
 
 $data = file_get_contents('php://input');
 print $data;
-$dataarr = split ("&", $data); 
-$email=$dataarr[0];
-$att_month=$dataarr[1];
-$att_year= $dataarr[2];
-   print $email;
-   print $att_month;
-   print $att_year;
-   
-$emailnew=str_replace("\%40","@",$dataarr[0]);
-print $emailnew;
-//$email=$_POST["email"];
-//$attmonth=$_POST["attmonth"];
-//$attyear=$_POST["attyear"];
+$data = json_decode($json);
+$email=$data->email;
+$attmonth=$data->attmonth;
+$attyear=$data->attyear;
 
-//$_POST["empdetails"];
-//$data = json_decode($empdetails, true);
- 
+
 $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password";
  
 try{
