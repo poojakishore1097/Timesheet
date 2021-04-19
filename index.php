@@ -11,6 +11,9 @@ $attyear=2021;
 //$attyear=$_POST["attyear"];
 
 $data = file_get_contents('php://input');
+echo $data[0];
+echo $data[1];
+echo $data[2];
 
 //$_POST["empdetails"];
 //$data = json_decode($empdetails, true);
@@ -19,7 +22,6 @@ $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password"
  
 try{
 //$empdetails = $request->getAttribute('empdetails');
-print $data;
     // create a PostgreSQL database connection
     $myPDO = new PDO("pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password");
 $sql = "SELECT  array_to_json(y)
