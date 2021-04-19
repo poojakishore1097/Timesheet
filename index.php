@@ -7,12 +7,12 @@ $email='pavithra.balan@kgisl.com';
 $attmonth=2;
 $attyear=2021;
 //$_POST["empdetails"];
-$data = json_decode($empdetails, true);
+//$data = json_decode($empdetails, true);
  
 $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password";
  
 try{
-$empdetails = $request->getAttribute('empdetails');
+//$empdetails = $request->getAttribute('empdetails');
 print $empdetails;
     // create a PostgreSQL database connection
     $myPDO = new PDO("pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password");
