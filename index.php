@@ -9,9 +9,9 @@ $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
 
 $data = file_get_contents('php://input');
 print $data;
-$email=echo $data[0];
-$attmonth=echo $data[1];
-$attyear=echo $data[2];
+$email=$data[0];
+$attmonth=$data[1];
+$attyear= $data[2];
 //$email=$_POST["email"];
 //$attmonth=$_POST["attmonth"];
 //$attyear=$_POST["attyear"];
