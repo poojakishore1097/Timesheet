@@ -11,7 +11,8 @@ $_POST["empdetails"];
 $dsn = "pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password";
  
 try{
-print empdetails;
+$empdetails = $request->getAttribute('empdetails');
+print $empdetails;
     // create a PostgreSQL database connection
     $myPDO = new PDO("pgsql:host=$host;port=5432;dbname=$db;user=$username;password=$password");
 $sql = "SELECT  array_to_json(y)
