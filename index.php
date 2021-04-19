@@ -10,6 +10,7 @@ $password = 'ab3a37d4d8295ac1e98a4a0d321e741c2b8262f7fa363b1c69359c0e26a74b77';
 //$data = file_get_contents('php://input');
 //print $data;
 $data = json_decode($json);
+print $data;
 $email=$data->email;
 $attmonth=$data->attmonth;
 $attyear=$data->attyear;
